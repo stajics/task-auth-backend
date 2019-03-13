@@ -6,17 +6,18 @@ const config = require('../');
 const errors = require('../constants/errors.constant');
 
 module.exports = new PassportLocalStrategy({
-  usernameField: 'email',
+  usernameField: 'username',
   passwordField: 'password',
   session: false,
-}, async (email, password, next) => {
+}, async (username, password, next) => {
   try {
     const userData = {
-      email: email.trim(),
+      username: username.trim(),
       password: password.trim(),
     };
 
-    const user = await User.findOne({ email: userData.email });
+    const user = await User.findOne({ username: userData.username });
+
     if (isEmpty(user)) {
       return next(errors.badCredentials());
     }

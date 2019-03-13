@@ -22,13 +22,14 @@ module.exports = () => {
       err.statusText = 'Payload Validation Error'; // eslint-disable-line
     }
     logger.error(err.stack);
+    console.error(err.status);
     switch (err.status) {
       case 404:
         return res.notFound(err);
-      case null:
-      case undefined:
       case 500:
         return res.serverError(err);
+      case null:
+      case undefined:
       default:
         return res.badRequest(err);
     }

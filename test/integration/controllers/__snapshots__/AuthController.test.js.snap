@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`:login [POST /auth/login] Should fail login (bad email) 1`] = `
-Object {
-  "error": Object {
-    "code": 1,
-    "message": "Bad credentials",
-  },
-}
-`;
-
 exports[`:login [POST /auth/login] Should fail login (bad password) 1`] = `
 Object {
   "error": Object {
@@ -18,17 +9,26 @@ Object {
 }
 `;
 
-exports[`:login [POST /auth/login] Should fail login (no email) 1`] = `
+exports[`:login [POST /auth/login] Should fail login (bad username) 1`] = `
+Object {
+  "error": Object {
+    "code": 1,
+    "message": "Bad credentials",
+  },
+}
+`;
+
+exports[`:login [POST /auth/login] Should fail login (no username) 1`] = `
 Object {
   "error": Object {
     "errors": Array [
       Object {
         "field": Array [
-          "email",
+          "username",
         ],
         "location": "body",
         "messages": Array [
-          "\\"email\\" is required",
+          "\\"username\\" is required",
         ],
         "types": Array [
           "any.required",
@@ -45,9 +45,7 @@ exports[`:login [POST /auth/login] Should login 1`] = `
 Object {
   "__v": 0,
   "_id": "189b5b4aa79dff2f7fe6659d",
-  "email": "user1@test.com",
-  "firstName": "user1_name",
-  "lastName": "user1_lastname",
+  "username": "user1@test.com",
 }
 `;
 
@@ -77,8 +75,6 @@ Object {
 exports[`:signup [POST /auth/signup] Should signup 1`] = `
 Object {
   "__v": 0,
-  "email": "test1@test.com",
-  "firstName": "name",
-  "lastName": "name",
+  "username": "test1@test.com",
 }
 `;

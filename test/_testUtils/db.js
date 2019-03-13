@@ -11,21 +11,21 @@ const initUsers = async () => {
   // Users
   let newUser1 = new User({
     _id: '189b5b4aa79dff2f7fe6659d',
-    email: 'user1@test.com',
+    username: 'user1@test.com',
     password: 'password',
     firstName: 'user1_name',
     lastName: 'user1_lastname',
   });
   let newUser2 = new User({
     _id: '289b5b4aa79dff2f7fe6759d',
-    email: 'user2@test.com',
+    username: 'user2@test.com',
     password: 'password',
     firstName: 'user2_name',
     lastName: 'user2_lastname',
   });
   let newUser3 = new User({
     _id: '389b5b4aa79dff2f7fe6859d',
-    email: 'user3@test.com',
+    username: 'user3@test.com',
     password: 'password',
     firstName: 'user3_name',
     lastName: 'user3_lastname',
