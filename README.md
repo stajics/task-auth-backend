@@ -1,6 +1,6 @@
 # task-auth-backend
 
-Using mongo, mongoose, passport js , tests using Jest
+Using mongo, mongoose, passport js , Joi validation, tests using Jest
 
 You need to run mongo db on port 27017
 
