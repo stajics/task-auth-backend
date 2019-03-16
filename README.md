@@ -1,5 +1,7 @@
 # task-auth-backend
 
+Using mongo, mongoose, passport js , tests using Jest
+
 You need to run mongo db on port 27017
 
 ### `npm install` or `yarn install`
